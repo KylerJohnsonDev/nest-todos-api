@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "a73adeec-b187-4dab-ba87-db7a5e9bd6e2",
+		"name": "Code Challenge Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET todos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/todos",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todos"
+					]
+				},
+				"description": "Get all todos"
+			},
+			"response": []
+		},
+		{
+			"name": "POST todo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\": \"Take out the trash\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/todos",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todos"
+					]
+				},
+				"description": "create a new todo"
+			},
+			"response": []
+		},
+		{
+			"name": "PUT todo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"shouldCompleteTodo\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/todos/8f0b803d-35f4-42d1-852a-6154e0aa5fb0",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todos",
+						"8f0b803d-35f4-42d1-852a-6154e0aa5fb0"
+					]
+				},
+				"description": "Update a todo"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE todo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/todos/8ab82a35-1f6f-4325-9c16-2f7adafee1bf",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todos",
+						"8ab82a35-1f6f-4325-9c16-2f7adafee1bf"
+					]
+				},
+				"description": "delete todo by id"
+			},
+			"response": []
+		},
+		{
+			"name": "GET todo by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/todos/df255f5f-e203-4131-a2de-dfc626eff36a",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todos",
+						"df255f5f-e203-4131-a2de-dfc626eff36a"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:3000"
+		}
+	]
+}
